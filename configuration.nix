@@ -112,6 +112,7 @@
     plocate
     i2c-tools
     vim
+    zulu11
   ];
   
   programs.fish.enable = true;
