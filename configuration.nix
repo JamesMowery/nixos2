@@ -148,6 +148,7 @@
     gtk2
     bzip2
     
+    
     # Without these it silently fails
     xorg.libXinerama
     xorg.libXcursor
@@ -220,9 +221,13 @@
     mesa
     libxkbcommon
 
-    # Java for financial apps
+    # For TOS
     zulu11
     #jdk11
+    
+    # For TWS
+    gtk3
+    pkg-config
   ];
 
   #nixpkgs.config.permittedInsecurePackages = [
