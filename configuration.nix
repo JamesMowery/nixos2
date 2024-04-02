@@ -86,7 +86,7 @@
   # User
   users.users.james = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" "input" "vboxuser" "plocate" ]; # Enable ‘sudo’ for the user.
     useDefaultShell = true;
     packages = with pkgs; [
       #firefox
@@ -110,6 +110,8 @@
     nvidia-vaapi-driver
     nvtop
     plocate
+    #podman-compose
+    docker-compose
     i2c-tools
     vim
     zulu11
@@ -121,6 +123,23 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
+  };
+
+  virtualisation = {
+    docker = {
+      enable = true;
+      storageDriver = "btrfs";
+    };
+    #podman = {
+    #  enable = true;
+
+    #  # Create a `docker` alias for podman, to use it as a drop-in replacement
+    #  dockerCompat = true;
+
+    #  # Required for containers under podman-compose to be able to talk to each other.
+    #  defaultNetwork.settings.dns_enabled = true;
+    #};
+
   };
   
   # Enable Binary Support
@@ -228,6 +247,7 @@
     # For TWS
     gtk3
     pkg-config
+    pipewire
   ];
 
   #nixpkgs.config.permittedInsecurePackages = [
