@@ -56,7 +56,7 @@
         inherit pkgs;
         specialArgs = {
           inherit pkgs-unstable;
-	  inherit self;
+	        inherit self;
         };
         modules = [
           ./configuration.nix

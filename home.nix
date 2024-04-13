@@ -38,10 +38,14 @@
     pkgs.thunderbird
 
     # Development
-    pkgs.lazygit
+    pkgs-unstable.bruno
+    pkgs-unstable.jq
+    pkgs-unstable.lazygit
     pkgs.nodejs
     pkgs.tree-sitter
     pkgs.vscodium
+    pkgs.websocat
+    pkgs.dpkg
 
     # Multimedia
     pkgs.ffmpeg
@@ -55,7 +59,7 @@
     #pkgs.gimp
     #pkgs.kicad
     pkgs-unstable.obs-studio
-    pkgs-unstable.obsidian
+    #pkgs-unstable.obsidian
 
     # Gaming
     pkgs-unstable.goverlay
@@ -76,10 +80,12 @@
     pkgs.discord
     pkgs.signal-desktop
     pkgs.telegram-desktop
+    pkgs-unstable.vesktop
 
     # Finance
     #pkgs.ib-tws
     pkgs.tradingview
+    #pkgs.jetbrains.jdk
   ];
 
   programs.firefox = {

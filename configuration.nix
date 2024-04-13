@@ -57,8 +57,8 @@
 
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
+    powerManagement.enable = true;
+    #powerManagement.finegrained = true;
     open = false;
     nvidiaSettings = true;
     forceFullCompositionPipeline = true;
@@ -167,7 +167,6 @@
     gtk2
     bzip2
     
-    
     # Without these it silently fails
     xorg.libXinerama
     xorg.libXcursor
@@ -239,6 +238,9 @@
     libdrm
     mesa
     libxkbcommon
+
+    # For TastyTrade
+    zlib
 
     # For TOS
     zulu11
